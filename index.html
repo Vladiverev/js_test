@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">    
+</head>
+<body>
+    <div id="page">
+        <form method="post" onSubmit="return validate(this)">
+            <fieldset>
+                <h1>
+                    Заполните данные отправки
+                </h1>
+                <p>
+                    <label for="last_name"><em>*</em> Фамилия получателя</label>
+                    <input class="last_name" name="last_name" type="text" />
+                </p>
+                <p>
+                    <label for="first_name"><em>*</em> Имя получателя</label>
+                    <input class="input" name="first_name" type="text" />
+                </p>
+                <p>
+                    <label for="second_name">Отчество получателя</label>
+                    <input class="input" name="second_name" type="text" />
+                </p>
+                <p>
+                    <h3>
+                        Выберите способ доставки
+                    </h3>
+                    <input type="checkbox" name="counter1" />
+                    <label for="counter1">Использовать транзитный счет </label>
+                    <input type="checkbox" name="counter2" />
+                    <label for="counter2">Использовать транзитный счет </label>
+                </p>
+                <p>
+                    <label for="city"><em>*</em>Город</label>
+                    <input class="input" name="city" type="text" />
+                </p>
+                <p>
+                    <label for="number_office"><em>*</em>Номер отделения</label>
+                    <input name="number_office" type="text" onkeyup="location_office(this)" />
+                </p>
+                <p>
+                    <label for="address_office"><em>*</em>Адрес отделения</label>
+                    <input class="input" name="address_office" disabled type="text" />
+                </p>
+                <p>
+                    <button class="button" id="button_save" type="submit">Сохранить</button>
+                    <button class="button" id="button_cancel" type="submit"> Отменить</button>
+            </fieldset>
+        </form>
+    </div>
+    <script src="./form.js"></script>
+</body>
+
+</html>
